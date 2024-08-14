@@ -1,0 +1,98 @@
+{
+  "main_section": {
+    "title": "Javier Alemán",
+    "subtitle": "Desarollador de aplicaciones",
+    "description": "Entusiasta de la elaboración de aplicaciones, enfocado en el Front-end, IA y Big Data.",
+    "language_title": "Change language to English",
+    "language_initials": "ES"
+  },
+  "projects_section": {
+    "projects": [
+      {
+        "title": "Unigo",
+        "image": "unigo.png",
+        "description": "Aplicación de diseños de ropa, en la que puedes colocar un estampado sobre una prenda y cada usuario puede tener sus propios diseños.",
+        "technologies": [
+          "react.png",
+          "css.png",
+          "laravel.png"
+        ],
+        "links": {
+          "github": "https://github.com/JaviARo/UniGo"
+        }
+      },
+      {
+        "title": "Healthy Thinking",
+        "image": "healthy-thinking.png",
+        "description": "Aplicación para agendar y localizar actividades deportivas. Desarrollada en grupo, para la que contribuí en el diseño y Front-end.",
+        "technologies": [
+          "react.png",
+          "styled-components.png",
+          "sequelize.png"
+        ],
+        "links": {
+          "github": "https://github.com/Sutteprutt1/Healthy-Thinking-GranCanaria",
+          "webpage": "https://healthy-thinking-gran-canaria.vercel.app"
+        }
+      },
+      {
+        "title": "FractureAI",
+        "image": "fractureAI.png",
+        "description": "Aplicación de detección de fracturas de huesos mediante imágenes de rayos X con redes neuronales.",
+        "technologies": [
+          "python.png",
+          "js.png",
+          "sass.png"
+        ],
+        "links": {
+          "github": "https://github.com/JaviARo/FractureAI",
+          "webpage": "https://fracture-ai.vercel.app"
+        } 
+      }
+    ],
+    "links": "Enlaces",
+    "links_titles": {
+      "github": "Ver repositorio",
+      "webpage": "Ver proyecto"
+    },
+    "techs": "Tecnologías utilizadas"
+  },
+  "technologies_section": {
+    "subtitle": "Principales herramientas utilizadas para mis proyectos"
+  },
+  "contact_section": {
+    "email": {
+      "subtitle": "Envíe un e-mail",
+      "img_title": "Ir al correo"
+    },
+    "social_media": {
+      "subtitle": "Visite mis RRSS",
+      "github_title": "Perfil de Github",
+      "linkedin_title": "Perfil de Linkedin"
+    },
+    "cv": {
+      "subtitle": "CV en papel",
+      "img_title": "Ver Curriculum",
+      "link": "../../../pdf/CV-ES.pdf"
+    },
+    "message_form": {
+      "subtitle": "Mande su mensaje en este formulario",
+      "name": "Nombre y apellidos",
+      "email": "E-mail",
+      "message": "Escriba aquí su mensaje",
+      "button": "Enviar mensaje",
+      "mandatory_field": "*Campo obligatorio"
+    }
+  },
+  "header_component": {
+    "main": "Inicio",
+    "projects": "Proyectos",
+    "technologies": "Tecnologías",
+    "contact": "Contacto"
+  },
+  "message_component": {
+    "sending": "Enviando mensaje...",
+    "sended": "¡Mensaje enviado!",
+    "error": "Error al enviar mensaje"
+  }
+}

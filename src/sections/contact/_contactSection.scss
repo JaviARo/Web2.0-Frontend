@@ -1,0 +1,154 @@
+#contact-section {
+  min-height: 75vh;
+  width: 100vw;
+  height: max-content;
+  margin-top: 5vh;
+  padding-bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include backgroundGradient(top);
+
+  #contact-info-mobile,
+  #contact-info,
+  #message-form {
+    z-index: 1;
+    height: min-content;
+  }
+
+  #contact-info-mobile {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    a, a > img {
+      width: 100%;
+    }
+  }
+
+  #contact-info {
+    display: grid;
+    grid-template-columns: 4fr 2fr 1fr;
+    justify-items: center;
+    height: min-content;
+
+    .contact-info-zone {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      @include pMargins(24px, 0px);
+
+      img {
+        width: 5vw;
+        @include imgShadow;
+      }
+
+      .contact-info-subtitle {
+        display: flex;
+        gap: 10px;
+
+        p {
+          margin: 0%;
+          display: none;
+        }
+      }
+
+      .contact-img-container {
+        display: flex;
+        width: 80%;
+        justify-content: space-around;
+      }
+    }
+  }
+
+  #message-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #form-grid {
+      width: 100%;
+      display: grid;
+      grid-gap: 2vw;
+    }
+
+    #form-button {
+      background-color: $byzantium;
+      margin-top: 24px;
+      padding: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 10px;
+      border: 0px;
+      cursor: pointer;
+    }
+  }
+}
+
+.form-button-active {
+  transition: filter 0.25s linear;
+  filter: drop-shadow(0 0 1rem transparent);
+
+  &:hover {
+    filter: drop-shadow(0 0 1rem $mountbatten-pink);
+  }
+}
+
+@mixin contactMediaQueries($repeat, $gap) {
+
+  #contact-info-mobile,
+  #contact-info,
+  #message-form {
+    width: calc(80% - 2*$gap);
+  }
+
+  #contact-info-mobile {
+    grid-gap: $gap;
+    margin-bottom: $gap;
+  }
+
+  #contact-info {
+    grid-gap: $gap * 3;
+    margin-bottom: $gap;
+  }
+
+  #contact-info-mobile,
+  .contact-info-zone,
+  #message-form
+  {
+    @include squaredBorder($gap);
+  }
+
+  #form-grid {
+    width: 100%;
+    grid-template-columns: repeat($repeat, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  @include contactMediaQueries(1, 20px);
+}
+
+@media only screen and (min-width: 600px) {
+  @include contactMediaQueries(1, 20px);
+}
+
+@media only screen and (min-width: 768px) {
+  @include contactMediaQueries(2, 25px);
+}
+
+@media only screen and (min-width: 992px) {
+  @include contactMediaQueries(2, 35px);
+}
+
+@media only screen and (min-width: 1200px) {
+  @include contactMediaQueries(2, 40px);
+}
+
+@media only screen and (min-width: 1600px) {
+  @include contactMediaQueries(2, 50px);
+
+  .contact-info-subtitle > p {
+    display: block !important;
+  }
+}

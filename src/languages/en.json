@@ -1,0 +1,98 @@
+{
+  "main_section": {
+    "title": "Javier Alemán",
+    "subtitle": "Software developer",
+    "description": "App developer enthusiastic, focused on Front-end, AI and Big Data.",
+    "language_title": "Cambiar idioma al español",
+    "language_initials": "EN"
+  },
+  "projects_section": {
+    "projects": [
+      {
+        "title": "Unigo",
+        "image": "unigo.png",
+        "description": "A clothing design app where users can apply prints to garments and create their own designs.",
+        "technologies": [
+          "react.png",
+          "css.png",
+          "laravel.png"
+        ],
+        "links": {
+          "github": "https://github.com/JaviARo/UniGo"
+        }
+      },
+      {
+        "title": "Healthy Thinking",
+        "image": "healthy-thinking.png",
+        "description": "An app to plan and locate sports activities. Developed in a group, I contributed to the design and front-end development.",
+        "technologies": [
+          "react.png",
+          "styled-components.png",
+          "sequelize.png"
+        ],
+        "links": {
+          "github": "https://github.com/Sutteprutt1/Healthy-Thinking-GranCanaria",
+          "webpage": "https://healthy-thinking-gran-canaria.vercel.app"
+        }
+      },
+      {
+        "title": "FractureAI",
+        "image": "fractureAI.png",
+        "description": "Bony fracture detection app using X ray images with neural networks.",
+        "technologies": [
+          "python.png",
+          "js.png",
+          "sass.png"
+        ],
+        "links": {
+          "github": "https://github.com/JaviARo/FractureAI",
+          "webpage": "https://fracture-ai.vercel.app"
+        } 
+      }
+    ],
+    "links": "Links",
+    "links_titles": {
+      "github": "Look repository",
+      "webpage": "Look project"
+    },
+    "techs": "Used technologies"
+  },
+  "technologies_section": {
+    "subtitle": "Main tools used in my projects"
+  },
+  "contact_section": {
+    "email": {
+      "subtitle": "Send an e-mail",
+      "img_title": "Go to your e-mail app"
+    },
+    "social_media": {
+      "subtitle": "Social media",
+      "github_title": "Github profile",
+      "linkedin_title": "Linkedin profile"
+    },
+    "cv": {
+      "subtitle": "CV on paper",
+      "img_title": "Look resume",
+      "link": "../../../pdf/CV-EN.pdf"
+    },
+    "message_form": {
+      "subtitle": "Send your message in this form",
+      "name": "Name and surname",
+      "email": "E-mail",
+      "message": "Write here your message",
+      "button": "Send mensaje",
+      "mandatory_field": "*Mandatory field"
+    }
+  },
+  "header_component": {
+    "main": "Main",
+    "projects": "Projects",
+    "technologies": "Tecnologies",
+    "contact": "Contact"
+  },
+  "message_component": {
+    "sending": "Sending message...",
+    "sended": "Menssage sended successfully!",
+    "error": "Error sending message"
+  }
+}

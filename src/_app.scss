@@ -1,0 +1,30 @@
+#app {
+  display: grid;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100vh;
+
+  .card-content {
+    @include setVisible(all 1s ease-in-out, none);
+    transition: all 1s ease-in-out;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+}
+
+@mixin backgroundGradient($toPosition) {
+  position: relative;
+  background: radial-gradient($crayola 1px, transparent 0);
+  background-size: 60px 60px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to $toPosition, transparent, $rich-black);
+    z-index: 0;
+  }
+}

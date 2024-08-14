@@ -1,0 +1,69 @@
+@import "variables";
+@import "app";
+@import "sections/main/mainSection";
+@import "sections/project/projectSection";
+@import "sections/technologies/technologiesSection";
+@import "sections/contact/contactSection";
+@import "components/header/header";
+@import "components/logo/logo";
+@import "components/input/input";
+@import "components/message/message";
+
+body {
+  margin: 0;
+  background-color: $rich-black;
+
+  h1, h2 {
+    font-family: $title;
+    margin: 0;
+    color: $timberwolf;
+  }
+  
+  p {
+    font-family: $text;
+    margin: 0;
+    color: $timberwolf
+  }
+  
+}
+
+@mixin indexMediaQueries($h1, $h2, $p) {
+
+  h1 {
+    font-size: $h1;
+  }
+
+  h2 {
+    font-size: $h2;
+  }
+
+  p, .form-input {
+    font-size: $p;
+  }
+  
+}
+
+@media only screen and (max-width: 600px) {
+  @include indexMediaQueries(28px, 16px, 16px);
+}
+
+@media only screen and (min-width: 600px) {
+  @include indexMediaQueries(36px, 20px, 18px);
+}
+
+@media only screen and (min-width: 768px) {
+  @include indexMediaQueries(40px, 22px, 20px);
+}
+
+@media only screen and (min-width: 992px) {
+  @include indexMediaQueries(48px, 24px, 22px);
+}
+
+@media only screen and (min-width: 1200px) {
+  @include indexMediaQueries(56px, 26px, 24px);
+}
+
+@media only screen and (min-width: 1600px) {
+  @include indexMediaQueries(72px, 28px, 26px);
+}
+

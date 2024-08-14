@@ -1,0 +1,133 @@
+#main-section {
+  width: 100vw;
+  justify-self: center;
+  position: relative;
+  justify-content: center;
+  @include backgroundGradient(bottom);
+
+  #main-grid {
+    width: 70vw;
+    margin-left: 15vw;
+    grid-gap: 5vw;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    #title {
+      color: $ivory;
+      align-self: center;
+      animation: showTitle 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      
+      z-index: 1;
+    }
+  
+    #myself {
+      margin-top: 12vh;
+      height: min-content;
+      display: flex;
+      justify-content: center;
+  
+      img {
+        height: 60vh;
+      }
+    }
+  }
+
+  #language {
+    position: absolute;
+    top: 5%;
+    right: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    cursor: pointer;
+    @include imgShadow;
+  }
+}
+
+@keyframes showTitle {
+  0%, 25% {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@mixin mainMediaQueries($imgHeight, $gap) {
+  #myself {
+    width: calc(100% - $imgHeight*2);
+    @include squaredBorder($imgHeight);
+  }
+
+  #language {
+    gap: $gap;
+
+    img {
+      height: $imgHeight;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  @include mainMediaQueries(20px, 5px);
+}
+
+@media only screen and (min-width: 600px) {
+  @include mainMediaQueries(20px, 5px);
+}
+
+@media only screen and (max-width: 768px) {
+  #main-section {
+    height: 75vh;
+
+    #main-grid {
+      grid-template-columns: 1fr;
+      margin-top: 13vh;
+
+      #title {
+        @include pMargins(12px, 0px);
+      }
+
+      #myself {
+        margin-top: 0vh;
+        height: min-content;
+        display: flex;
+        justify-content: center;
+    
+        img {
+          height: 30vh;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  @include mainMediaQueries(25px, 6px);
+
+  #main-section {
+    height: 80vh;
+
+    #main-grid {
+      #title {
+        @include pMargins(24px, 0px);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  @include mainMediaQueries(30px, 8px);
+}
+
+@media only screen and (min-width: 1200px) {
+  @include mainMediaQueries(35px, 10px);
+}
+
+@media only screen and (min-width: 1600px) {
+  @include mainMediaQueries(40px, 12px);
+}

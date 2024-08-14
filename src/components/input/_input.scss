@@ -1,0 +1,81 @@
+label {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+
+  .text-label {
+    display: flex;
+
+    .mandatory-field {
+      color: $red;
+      margin-left: 10px;
+      @include setVisible(all 1s ease-in-out, none);
+    }
+  }
+
+  .remaining-chars {
+    position: absolute;
+    right: 5px;
+    margin: 0;
+    color: $dim-gray;
+  }
+
+  .rch-input {
+    bottom: 0%;
+  }
+
+  .rch-txa {
+    bottom: 3%;
+  }
+
+  .form-input {
+    border-radius: 10px;
+    border: 0;
+    resize: none;
+    font-family: $text;
+    padding: 5px;
+    padding-right: 50px;
+    width: calc(100% - 55px);
+    background-color: $timberwolf;
+  
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .form-input-no-rc {
+    background-color: $crayola;
+  }
+
+  textarea::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+    background-color: unset;
+  }
+  
+  textarea::-webkit-scrollbar-thumb {
+    background-color: rgba(62, 62, 62, 0.7);
+    border-radius: 3px;
+  }
+  
+  textarea:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(83, 83, 83, 0.7);
+  }
+  
+  textarea {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(62, 62, 62, 0.7) transparent;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  label .text-label {
+    @include pMargins(12px, 12px);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  label .text-label {
+    @include pMargins(24px, 12px);
+  }
+}

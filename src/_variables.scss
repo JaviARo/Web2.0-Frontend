@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Quicksand:wght@300..700&display=swap');
+
+$title: "Bungee", sans-serif;
+$text: "Quicksand", sans-serif;
+
+$crayola: rgb(226, 126, 68);
+$crayola-tr: rgb(226, 126, 68, 0.4);
+$crayola-tr-02: rgb(226, 126, 68, 0.2);
+$timberwolf: rgb(216, 216, 216);
+$timberwolf-tr: rgb(216, 216, 216, 0.4);
+$dim-gray: rgb(100, 100, 100);
+$ivory: rgb(255, 255, 234);
+$byzantium: rgb(125, 46, 104);
+$byzantium-tr-02: rgb(125, 46, 104, 0.2);
+$mountbatten-pink: rgb(163, 109, 144);
+$rich-black: rgb(3, 25, 38);
+$rich-black-tr: rgb(3, 25, 38, 0.9);
+$black-tr-08: rgb(0, 0, 0, 0.7);
+$red: rgb(255, 39, 75);
+
+@mixin squaredBorder($padding, $color: $crayola, $color-tr: $crayola-tr-02) {
+  position: relative;
+  padding: $padding;
+  background-color: $color-tr;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 6px solid $color;
+    border-left: 6px solid $color;
+    width: 25%;
+    height: 25%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-bottom: 6px solid $color;
+    border-right: 6px solid $color;
+    width: 25%;
+    height: 25%;
+  }
+
+  h2 {
+    margin-bottom: 2vh;
+  }
+
+  @include setVisible(
+    showSquaredBorder 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+    hideSquaredBorder 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+  );
+}
+
+@mixin pMargins($marginTop, $marginBottom) {
+  p {
+    margin-top: $marginTop;
+    margin-bottom: $marginBottom;
+  }
+}
+
+@mixin setVisible($visibleAnimation, $hideAnimation) {
+  opacity: 0;
+  visibility: hidden;
+
+  &.visible {
+    animation: $visibleAnimation;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &.visible-no-animation {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &.hide {
+    animation: $hideAnimation !important;
+  }
+}
+
+@mixin imgShadow {
+  transition: filter 0.25s linear;
+  filter: drop-shadow(0 0 1rem transparent);
+
+  &:hover {
+    filter: drop-shadow(0 0 1rem $timberwolf-tr);
+  }
+}
+
+@keyframes showSquaredBorder {
+  0% {
+    background-color: transparent;
+    transform: scale(0.0);
+  }
+
+  50% {
+    background-color: transparent;
+    transform: scale(1.0);
+  }
+
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+@keyframes hideSquaredBorder {
+  0% {
+    transform: scale(1.0);
+  }
+
+  50% {
+    background-color: transparent;
+    transform: scale(1.0);
+  }
+
+  100% {
+    background-color: transparent;
+    transform: scale(0.0);
+  }
+}
+

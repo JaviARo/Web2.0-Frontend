@@ -1,0 +1,47 @@
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+
+  .logo-img-container {
+    display: flex;
+    align-items: center;
+    height: calc(100% - 20px);
+    width: 100%;
+    img {
+      width: 100%;
+      height: min-content;
+      @include imgShadow; 
+    }
+  }
+}
+
+@mixin logoMediaQueries($pHeight) {
+  .logo {
+    .logo-img-container {
+      height: calc(100% - $pHeight);
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  @include logoMediaQueries(20px);
+}
+
+@media only screen and (min-width: 600px) {
+  @include logoMediaQueries(23px);
+}
+
+@media only screen and (min-width: 768px) {
+  @include logoMediaQueries(25px);
+}
+
+@media only screen and (min-width: 992px) {
+  @include logoMediaQueries(28px);
+}
+
+@media only screen and (min-width: 1200px) {
+  @include logoMediaQueries(30px);
+}
