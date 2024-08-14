@@ -81,7 +81,6 @@ const ContactSection: React.FC<SectionProps> = ({ isActive }) => {
           sendMessage(inputs[0].value, inputs[1].value, inputs[2].value).then((response) => {
             hideMessageContainer(messageContainers[0]);
             const startingNumber = response.status.toString().substring(0, 1);
-            console.log(startingNumber);
             if (startingNumber === "2") {
               setTimeout(() => {
                 showMessageContainer(messageContainers[1]);
