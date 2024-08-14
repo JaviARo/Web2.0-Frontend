@@ -10,9 +10,10 @@
     align-items: center;
     height: calc(100% - 20px);
     width: 100%;
+
     img {
       width: 100%;
-      height: min-content;
+      height: auto;
       @include imgShadow; 
     }
   }

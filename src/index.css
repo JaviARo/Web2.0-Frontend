@@ -223,7 +223,7 @@
 }
 @media only screen and (max-width: 768px) {
   #main-section {
-    height: 75vh;
+    height: 70vh;
   }
   #main-section #main-grid {
     grid-template-columns: 1fr;
@@ -2342,8 +2342,7 @@
 }
 .logo .logo-img-container img {
   width: 100%;
-  height: -moz-min-content;
-  height: min-content;
+  height: auto;
   transition: filter 0.25s linear;
   filter: drop-shadow(0 0 1rem transparent);
 }
