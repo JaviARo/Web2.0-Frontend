@@ -63,7 +63,6 @@ const Header: React.FC<HeaderProps> = ({ projectSectionRef, technologiesSectionR
             }, 1000);
             
           } else {
-            console.log("hola");
             h2s[i].classList.add("hide");
             setTimeout(() => {
               h2s[i].classList.remove("visible");
